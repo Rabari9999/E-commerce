@@ -11,8 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sastaBazar</name>
-	<description>sastaBazar E-commerce backend</description>
+	<name>ecommerce-backend</name>
+	<description>E-commerce backend application</description>
 	<url/>
 	<licenses>
 		<license/>
