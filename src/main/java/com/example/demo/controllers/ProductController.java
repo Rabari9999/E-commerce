@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * REST Controller for managing products in the e-commerce system.
+ * Provides endpoints for creating and retrieving products.
+ */
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -16,12 +20,21 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    /**
+     * Creates a new product.
+     * @param request The product creation request containing name, description, price, and stock.
+     * @return The created product.
+     */
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody CreateProduct request) {
         Product product = productService.createProduct(request);
         return ResponseEntity.ok(product);
     }
 
+    /**
+     * Retrieves all products.
+     * @return List of all products in the system.
+     */
     @GetMapping
     public ResponseEntity<List<Product>> getAllProducts() {
         List<Product> products = productService.getAllProducts();
